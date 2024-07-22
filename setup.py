@@ -15,7 +15,7 @@ INSTALL_REQUIRES = [
     "duckdb>=0.8.1",
     "sql-metadata>=2.7.0",
     "validators>=0.22.0",
-    "requests"
+    "requests>=2.32.3"
 ]
 
 
