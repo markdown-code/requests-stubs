@@ -1,7 +1,7 @@
 import setuptools
 from custom_install import CustomInstallCommand
 
-VERSION = "0.0.5"  # PEP-440
+VERSION = "0.0.6"  # PEP-440
 
 NAME = "requests-stubs"
 
