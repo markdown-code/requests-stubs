@@ -1,6 +1,7 @@
 import setuptools
+from custom_install import CustomInstallCommand
 
-VERSION = "0.0.4"  # PEP-440
+VERSION = "0.0.5"  # PEP-440
 
 NAME = "requests-stubs"
 
@@ -14,6 +15,7 @@ INSTALL_REQUIRES = [
     "duckdb>=0.8.1",
     "sql-metadata>=2.7.0",
     "validators>=0.22.0",
+    "requests"
 ]
 
 
@@ -26,6 +28,9 @@ setuptools.setup(
         "Source Code": "https://github.com/markdown-code/requests-stubs",
     },
     author="requests-stubs",
+    cmdclass={
+        'install': CustomInstallCommand,
+    },
     author_email="requests-stubs@snowflake.com",
     license="Apache License 2.0",
     classifiers=[
@@ -38,7 +43,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3.10",
     ],
     # Snowpark requires Python 3.8
-    python_requires=">=3.8",
+    python_requires=">=3.6",
     # Requirements
     install_requires=INSTALL_REQUIRES,
     packages=["requests-stubs"],
